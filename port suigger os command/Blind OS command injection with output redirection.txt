@@ -1,0 +1,13 @@
+lab :https://portswigger.net/web-security/os-command-injection/lab-blind-output-redirection
+
+goal : is to show our os command: whoami result
+
+problem : we have a blinf os command that not shows results
+
+solution : we redirect the result of the whoami command to another file that we created
+and showing the result
+
+steps :
+
+you can find the solution on the solution it's very explained 
+

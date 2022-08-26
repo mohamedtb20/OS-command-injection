@@ -1,0 +1,16 @@
+lab : https://portswigger.net/web-security/os-command-injection/lab-blind-time-delays
+
+goal : is to detect blind os commande injection
+
+explanation :
+Sometimes when a website is vulnirable to a os commande injection vulniurability but the website doesn't return any result which means that there is a blind sql injection.
+How to detect that the website is vulnirable to os command injection if it's vulnirable because  can't send us a response so we will base on time delay 
+The time of the website response is longer if we execute a command like ping -c 10 loopack_address with the vulnirable parameter if the website get 10 second to reply that means the parameter is vulnirable and the website is vulnirable to an os comand
+
+steps :
+0-go to burp suite and send the get request of the feedback
+1-sending get the post request response from the website by filling the cases and click on send feedback
+2-there are a multiple parameters : name , email subject message
+3-we test which parameter is vulnirable by adding the ping command with || operator
+4-the email paramater is the vulnirable one 
+5-you can see that after sending the request the website get 10 seconds to respond

